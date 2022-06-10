@@ -6,6 +6,7 @@ body {
 .personal{
     color: dodgerblue;
     text-align: center;
+    padding-right: 10%;
 }
 
 .inputHalf{
@@ -17,9 +18,9 @@ body {
     float: right;
     width: 50%;
 }
-/* .previewHalf > * {
-    float: right;
-} */
+.previewHalf > * {
+    padding-left: 10%;
+}
 
 input[type=text], select {
     width: 100%;

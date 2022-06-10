@@ -9,8 +9,8 @@ class Work extends Component {
     this.state = {
       employer: "",
       jobTitle: "",
-      startDate: 0,
-      endDate: 0,
+      jobStart: 0,
+      jobEnd: 0,
       responsibilities: "",
     };
     this.handleChange = this.handleChange.bind(this);
@@ -27,56 +27,17 @@ class Work extends Component {
   }
 
   render() {
+    const { employer, jobTitle, jobStart, jobEnd, responsibilities } =
+      this.props;
     return (
       <div>
         <h1 className="personal">Work Experience</h1>
-
-        <form onSubmit={this.onClickBtn}>
-          <label htmlFor="employer">Employer</label>
-          <input
-            type="text"
-            id="employer"
-            required
-            onChange={this.handleChange}
-            value={this.state.employer}
-          />
-
-          <label htmlFor="title">Title</label>
-          <input
-            className="description"
-            type="text"
-            id="title"
-            required
-            onChange={this.handleChange}
-            value={this.state.title}
-          />
-
-          <label htmlFor="description">Description and Responsibilities</label>
-          <input
-            type="text"
-            id="description"
-            required
-            onChange={this.handleChange}
-            value={this.state.description}
-          />
-
-          <label htmlFor="startDate">Start Date</label>
-          <input
-            type="date"
-            id="startDate"
-            required
-            onChange={this.handleChange}
-            value={this.state.startDate}
-          />
-          <label htmlFor="endDate">End Date</label>
-          <input
-            type="date"
-            id="endDate"
-            required
-            onChange={this.handleChange}
-            value={this.state.endDate}
-          />
-        </form>
+        <p> {employer} </p>
+        <p> {jobTitle} </p>
+        <p>
+          {jobStart} {jobEnd}
+        </p>
+        <p>{responsibilities} </p>
       </div>
     );
   }
